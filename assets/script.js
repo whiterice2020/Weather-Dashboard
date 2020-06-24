@@ -29,9 +29,11 @@ $.ajax({
     var windSpeed = response.wind.speed;
     var lat = response.coord.lat;
     var lon = response.coord.lon;
+    var icon = response.weather[0].icon;
     var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?appid=eee27dfad5db9dce473a5293caa3df71&lat=" + lat + "&lon=" + lon;
     // // Testing Response Data
     console.log(queryURLUV);
+    console.log(icon);
     console.log("Current temp " + temp);
     console.log("Current humidity " + humidty);
     console.log("Current Windspeed " + windSpeed);
@@ -55,6 +57,8 @@ $.ajax({
             var temp5 = response.list[0].main.temp;
             var humidty5 = response.list[0].main.humidity;
             var windSpeed5 = response.list[0].wind.speed;
+            var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+            var iconImg = ;
         // var uvIndex = response.main.temp; have to fix this
         // Testing Response Data
             console.log("5 day temp " + temp5);
@@ -67,6 +71,10 @@ $.ajax({
             console.log(lon);
 
             $("#cityName").append(city);
+            $("#cityName").append(iconURL);
+            console.log(iconURL);
+            
+
               // Append the table row to the table body
             $("#currentTemp").append(" " + temp);
             $("#humidity").append(" " + humidty);
