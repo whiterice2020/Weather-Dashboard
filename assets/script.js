@@ -58,7 +58,8 @@ $.ajax({
             var humidty5 = response.list[0].main.humidity;
             var windSpeed5 = response.list[0].wind.speed;
             var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-            var iconImg = ;
+            // var iconImg = $();
+            var iconImg = $("<img>").attr("src", iconURL)
         // var uvIndex = response.main.temp; have to fix this
         // Testing Response Data
             console.log("5 day temp " + temp5);
@@ -71,7 +72,7 @@ $.ajax({
             console.log(lon);
 
             $("#cityName").append(city);
-            $("#cityName").append(iconURL);
+            $("#cityName").append(iconImg);
             console.log(iconURL);
             
 
