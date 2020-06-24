@@ -11,7 +11,9 @@ var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=Orlando
 // queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
 var apiKey = "eee27dfad5db9dce473a5293caa3df71";
 // var city ="$("#inputBox")";
-var city = "Orlando";
+var city = document.getElementById('inputBox').value;
+console.log(city);
+
 // var lat = "";
 // var lon = "";
 
@@ -30,8 +32,13 @@ $.ajax({
     var lat = response.coord.lat;
     var lon = response.coord.lon;
     var icon = response.weather[0].icon;
+    
     var queryURLUV = "https://api.openweathermap.org/data/2.5/uvi?appid=eee27dfad5db9dce473a5293caa3df71&lat=" + lat + "&lon=" + lon;
     // // Testing Response Data
+    var today = new Date();
+    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+    console.log(date);
+            
     console.log(queryURLUV);
     console.log(icon);
     console.log("Current temp " + temp);
@@ -58,9 +65,10 @@ $.ajax({
             var humidty5 = response.list[0].main.humidity;
             var windSpeed5 = response.list[0].wind.speed;
             var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-            // var iconImg = $();
+                       
+            
             var iconImg = $("<img>").attr("src", iconURL)
-        // var uvIndex = response.main.temp; have to fix this
+        
         // Testing Response Data
             console.log("5 day temp " + temp5);
             console.log("5 day humidity " + humidty5);
@@ -72,15 +80,31 @@ $.ajax({
             console.log(lon);
 
             $("#cityName").append(city);
+            $("#cityName").append(" " + " (" + date + ")");
             $("#cityName").append(iconImg);
             console.log(iconURL);
             
-
-              // Append the table row to the table body
+                
+              // Append the weather data the body
             $("#currentTemp").append(" " + temp);
-            $("#humidity").append(" " + humidty);
+            $("#humidity").append(" " + humidty + "%");
             $("#windSpeed").append(" " + windSpeed + " MPH");
             $("#uvIndex").append(" " + UV);
+            $("#day1").append(date);
+            $("#day1").append("Temp: " + temp5);
+            $("#day1").append("Humidity: " + humidty5 + "%");
+            $("#day2").append(date);
+            $("#day2").append("Temp: " + temp5);
+            $("#day2").append("Humidity: " + humidty5 + "%");
+            $("#day3").append(date);
+            $("#day3").append("Temp: " + temp5);
+            $("#day3").append("Humidity: " + humidty5 + "%");
+            $("#day4").append(date);
+            $("#day4").append("Temp: " + temp5);
+            $("#day4").append("Humidity: " + humidty5 + "%");
+            $("#day5").append(date);
+            $("#day5").append("Temp: " + temp5);
+            $("#day5").append("Humidity: " + humidty5 + "%");
               
 
           });
