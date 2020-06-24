@@ -5,17 +5,17 @@
 // test var for orlando full url
 // queryURLCurrent = "api.openweathermap.org/data/2.5/weather?q= {city name} &appid= {your api key} ";
 queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=Orlando&appid=eee27dfad5db9dce473a5293caa3df71";
-queryURL5Day = "https://api.openweathermap.org/data/2.5/forecast?q=Orlando&appid=eee27dfad5db9dce473a5293caa3df71";
+queryURL5Day = "https://api.openweathermap.org/data/2.5/forecast?q=Orlando&appid=" + apiKey;
 // queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid= **api key** &lat=  **{lat}**  &lon=  **{lon}**";
 // queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid= **api key** &lat=  **  &lon=  **Lon**";
-queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}";
-var apiKey = "&appid=eee27dfad5db9dce473a5293caa3df71";
+queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid="+apiKey+ "&lat=" + lat "&lon=" + lon";
+var apiKey = "eee27dfad5db9dce473a5293caa3df71";
 var city ="";
 var lat = "";
 var lon = "";
 
 
-
+// ?? document.ready(function)
 
 
 // Getting Data from API Current Weather
