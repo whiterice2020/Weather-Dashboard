@@ -1,3 +1,4 @@
+
 // vars
 // URL should be in this format = "api.openweathermap.org/data/2.5/forecast?q={city name}&appid={your api key}"
 // example "api.openweathermap.org/data/2.5/forecast?q= "City Var" "apiKey Var"{your api key}"
@@ -20,7 +21,6 @@ console.log(searchbox);
 
 
 // ?? document.ready(function)
-
 
 // Getting Data from API Current Weather
 $.ajax({
@@ -91,21 +91,21 @@ $.ajax({
             $("#humidity").append(" " + humidty + "%");
             $("#windSpeed").append(" " + windSpeed + " MPH");
             $("#uvIndex").append(" " + UV);
-            // $("#day1").append(date);
-            // $("#day1").append("Temp: " + temp5);
-            // $("#day1").append("Humidity: " + humidty5 + "%");
-            // $("#day2").append(date);
-            // $("#day2").append("Temp: " + temp5);
-            // $("#day2").append("Humidity: " + humidty5 + "%");
-            // $("#day3").append(date);
-            // $("#day3").append("Temp: " + temp5);
-            // $("#day3").append("Humidity: " + humidty5 + "%");
-            // $("#day4").append(date);
-            // $("#day4").append("Temp: " + temp5);
-            // $("#day4").append("Humidity: " + humidty5 + "%");
-            // $("#day5").append(date);
-            // $("#day5").append("Temp: " + temp5);
-            // $("#day5").append("Humidity: " + humidty5 + "%");
+            $("#day1").append(date);
+            $("#day1").append("Temp: " + temp5);
+            $("#day1").append("Humidity: " + humidty5 + "%");
+            $("#day2").append(date);
+            $("#day2").append("Temp: " + temp5);
+            $("#day2").append("Humidity: " + humidty5 + "%");
+            $("#day3").append(date);
+            $("#day3").append("Temp: " + temp5);
+            $("#day3").append("Humidity: " + humidty5 + "%");
+            $("#day4").append(date);
+            $("#day4").append("Temp: " + temp5);
+            $("#day4").append("Humidity: " + humidty5 + "%");
+            $("#day5").append(date);
+            $("#day5").append("Temp: " + temp5);
+            $("#day5").append("Humidity: " + humidty5 + "%");
                 
               });
   
@@ -120,7 +120,13 @@ $(".button").on("click", function(event){
 // code to capture text from input box and save as var city
   // preventing page from refreshing/button from submitting on form
     event.preventDefault();
-    // This line will grab the text from the input box
-    var city = $("cityInput").val().trim();
+    // This line will grab the text from the input boxvar city = $(".form-control").val();
+    var city = $(".form-control").val();
+    console.log(city);
+    
+    
+    
+    // var city = $("cityInput").val().trim();
+    
 });
 
