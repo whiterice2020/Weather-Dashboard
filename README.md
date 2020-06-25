@@ -17,3 +17,5 @@ https://whiterice2020.github.io/Weather-Dashboard/
 
 Respository Link
 https://github.com/whiterice2020/Weather-Dashboard
+
+![Annotation 2020-06-24 230107](https://user-images.githubusercontent.com/66220747/85648409-b48cb700-b66e-11ea-9b56-01e25af884e4.jpg)
