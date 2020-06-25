@@ -19,3 +19,7 @@ Respository Link
 https://github.com/whiterice2020/Weather-Dashboard
 
 ![Annotation 2020-06-24 230107](https://user-images.githubusercontent.com/66220747/85648409-b48cb700-b66e-11ea-9b56-01e25af884e4.jpg)
+
+The Dashboard will also pull the icons from the API and place them next to each forecast.
+![Annotation 2020-06-24 230339](https://user-images.githubusercontent.com/66220747/85648554-03d2e780-b66f-11ea-8e79-bb77c7bee735.jpg)
+
