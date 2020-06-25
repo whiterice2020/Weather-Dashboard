@@ -56,6 +56,7 @@ $.ajax({
       var UV = response.value;
       console.log(UV);
       var queryURL5Day = "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=eee27dfad5db9dce473a5293caa3df71";
+      console.log("5dayurl" + queryURL5Day );
       
       // Getting 5 day Forecast Data
             $.ajax({
