@@ -11,8 +11,9 @@ var queryURLCurrent = "https://api.openweathermap.org/data/2.5/weather?q=Orlando
 // queryURLUV = "http://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey + "&lat=" + lat + "&lon=" + lon;
 var apiKey = "eee27dfad5db9dce473a5293caa3df71";
 // var city ="$("#inputBox")";
-var city = document.getElementById('inputBox').value;
-console.log(city);
+var searchbox = document.getElementById("searchField").value;
+console.log(searchbox);
+
 
 // var lat = "";
 // var lon = "";
@@ -67,7 +68,7 @@ $.ajax({
             var iconURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
                        
             
-            var iconImg = $("<img>").attr("src", iconURL)
+            var iconImg = $("<img>").attr("src", iconURL);
         
         // Testing Response Data
             console.log("5 day temp " + temp5);
@@ -79,7 +80,7 @@ $.ajax({
             console.log(lat);
             console.log(lon);
 
-            $("#cityName").append(city);
+            $("#cityName").append("Orlando");
             $("#cityName").append(" " + " (" + date + ")");
             $("#cityName").append(iconImg);
             console.log(iconURL);
@@ -90,24 +91,23 @@ $.ajax({
             $("#humidity").append(" " + humidty + "%");
             $("#windSpeed").append(" " + windSpeed + " MPH");
             $("#uvIndex").append(" " + UV);
-            $("#day1").append(date);
-            $("#day1").append("Temp: " + temp5);
-            $("#day1").append("Humidity: " + humidty5 + "%");
-            $("#day2").append(date);
-            $("#day2").append("Temp: " + temp5);
-            $("#day2").append("Humidity: " + humidty5 + "%");
-            $("#day3").append(date);
-            $("#day3").append("Temp: " + temp5);
-            $("#day3").append("Humidity: " + humidty5 + "%");
-            $("#day4").append(date);
-            $("#day4").append("Temp: " + temp5);
-            $("#day4").append("Humidity: " + humidty5 + "%");
-            $("#day5").append(date);
-            $("#day5").append("Temp: " + temp5);
-            $("#day5").append("Humidity: " + humidty5 + "%");
-              
-
-          });
+            // $("#day1").append(date);
+            // $("#day1").append("Temp: " + temp5);
+            // $("#day1").append("Humidity: " + humidty5 + "%");
+            // $("#day2").append(date);
+            // $("#day2").append("Temp: " + temp5);
+            // $("#day2").append("Humidity: " + humidty5 + "%");
+            // $("#day3").append(date);
+            // $("#day3").append("Temp: " + temp5);
+            // $("#day3").append("Humidity: " + humidty5 + "%");
+            // $("#day4").append(date);
+            // $("#day4").append("Temp: " + temp5);
+            // $("#day4").append("Humidity: " + humidty5 + "%");
+            // $("#day5").append(date);
+            // $("#day5").append("Temp: " + temp5);
+            // $("#day5").append("Humidity: " + humidty5 + "%");
+                
+              });
   
   
   
@@ -115,30 +115,8 @@ $.ajax({
   
 });
 
-// Getting Data from API for 5 day forcast
 
-// Getting Data from API for UV Index
-// $.ajax({
-//     url: queryURLUV,
-//     method: "GET"
-//   }).then(function(response) {
-//     var temp = response.list[0].main.temp;
-//     var humidty = response.list[0].main.humidity;
-//     var windSpeed = response.list[0].wind.speed;
-//     // var uvIndex = response.main.temp; have to fix this
-// // Testing Response Data
-//     console.log("temp " + temp);
-//     console.log("humidity " + humidty);
-//     console.log("Windspeed " + windSpeed);
-    
-
-    
-    
-//   });
-
-
-
-$(".button").on("click", function(){
+$(".button").on("click", function(event){
 // code to capture text from input box and save as var city
   // preventing page from refreshing/button from submitting on form
     event.preventDefault();
@@ -146,18 +124,3 @@ $(".button").on("click", function(){
     var city = $("cityInput").val().trim();
 });
 
-// ✓ User can search for weather reports by city using the openweathermap API.
-
-// ✓ After searching for a city, the following information is displayed: current temperature, current humidity, windspeed, uv index, and 5 day forecast.
-
-// ✓ Application uses icons to represent weather conditions.
-
-// ✓ Application stores previously searched for cities in local storage and displays them to the user.
-
-// ✓ Application loads last searched city forecast on page load.
-
-
-
-// [orlando]
-
-// [orlando, austin]
